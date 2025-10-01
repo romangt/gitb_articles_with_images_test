@@ -2,6 +2,8 @@
 
 require 'rails_helper'
 
+# Desribes Posting
+# Should describe Article
 RSpec.describe Posting, type: :model do
   describe '.article_with_image' do
     posting_body =  "<p>Hi dear community members,</p>\r\n<p><strong>Spotlight #3</strong>"\
@@ -23,6 +25,8 @@ RSpec.describe Posting, type: :model do
 
     let(:posting) { insert :posting, body: posting_body, type: 'Article' }
 
+    # Should not be part of this describe
+    # Useless
     it 'should be an Article model' do
       expect(posting.type).to eq('Article')
       expect(posting.body).to eq(posting_body)
